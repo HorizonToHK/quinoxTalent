@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Quinox Talent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo">QUINOX</div>
+    
+    <div id="myNav" class="menu-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="artists.html">Our Artists</a>
+        <a href="studio.html">Our Studio</a>
+        <a href="events.html">Events</a>
+        <a href="socials.html">Social Media</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    <button class="nav-toggle" onclick="openNav()">Menu</button>
+
+    <div class="container">
+        <p class="subtitle">Get In Touch</p>
+        <h1>CONTACT US</h1>
+        <p>Let's create something extraordinary together.</p>
+
+        <div class="contact-grid">
+            
+            <!-- Contact Information -->
+            <div>
+                <div class="info-card">
+                    <h2>HEADQUARTERS</h2>
+                    <p>
+                        8550 Sunset Boulevard<br>
+                        West Hollywood, CA 90069<br>
+                        United States
+                    </p>
+                    
+                    <h3>GENERAL INQUIRIES</h3>
+                    <p style="color: var(--accent-glow);">info@quinoxtalent.com</p>
+                    <p style="color: var(--text-muted);">+1 (310) 555-QUINOX</p>
+                    
+                    <h3>ARTIST BOOKINGS</h3>
+                    <p style="color: var(--accent-glow);">bookings@quinoxtalent.com</p>
+                    <p style="color: var(--text-muted);">+1 (310) 555-2026</p>
+                    
+                    <h3>STUDIO BOOKINGS</h3>
+                    <p style="color: var(--accent-glow);">studio@quinoxtalent.com</p>
+                    <p style="color: var(--text-muted);">+1 (310) 555-7890</p>
+                    
+                    <h3>BUSINESS HOURS</h3>
+                    <p style="color: var(--text-muted);">
+                        Monday – Friday: 9:00 AM – 6:00 PM PST<br>
+                        Saturday – Sunday: By Appointment
+                    </p>
+                </div>
+            </div>
+
+            <!-- Enquiry Form -->
+            <div>
+                <h2 style="margin-bottom: 25px;">SEND US A MESSAGE</h2>
+                <form onsubmit="handleSubmit(event)">
+                    
+                    <label>FULL NAME *</label>
+                    <input type="text" placeholder="John Doe" required>
+
+                    <label>EMAIL ADDRESS *</label>
+                    <input type="email" placeholder="john@example.com" required>
+
+                    <label>PHONE NUMBER</label>
+                    <input type="tel" placeholder="+1 (555) 000-0000">
+
+                    <label>INQUIRY TYPE *</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option value="booking">Artist Booking</option>
+                        <option value="studio">Studio Rental</option>
+                        <option value="representation">Artist Representation</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="press">Press / Media</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label>MESSAGE *</label>
+                    <textarea rows="6" placeholder="Tell us about your project or inquiry..." required></textarea>
+
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+                    
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px;">
+                        * Required fields. We typically respond within 24-48 hours.
+                    </p>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="card" style="margin-top: 50px; padding: 0; overflow: hidden;">
+            <div style="background: linear-gradient(135deg, #1a1a1a, #0d0d0d); height: 400px; display: flex; align-items: center; justify-content: center; color: #444;">
+                <div style="text-align: center;">
+                    <h2 style="color: #333; margin-bottom: 10px;">MAP LOCATION</h2>
+                    <p style="color: #444;">8550 Sunset Blvd, West Hollywood, CA</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
