@@ -1,0 +1,388 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;800&family=Orbitron:wght@700;900&display=swap');
+
+:root {
+    --bg-color: #0a0a0a;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --text-main: #ffffff;
+    --text-muted: #999999;
+    --accent: #ff3366; /* Quinox Pink/Red */
+    --accent-secondary: #ffcc00; /* Gold accent */
+    --accent-glow: #00ffff; /* Cyan */
+    --border: rgba(255, 255, 255, 0.08);
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Raleway', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 51, 102, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 204, 0, 0.03) 0%, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+}
+
+/* --- Navigation Button --- */
+.nav-toggle {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 1000;
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 12px 25px;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.nav-toggle:hover {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 20px var(--accent), 0 0 40px rgba(255, 51, 102, 0.3);
+    transform: translateY(-2px);
+}
+
+/* --- Full Screen Menu Overlay --- */
+.menu-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.98) 0%, rgba(20, 10, 15, 0.98) 100%);
+    backdrop-filter: blur(15px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-overlay a {
+    padding: 18px;
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    display: block;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.menu-overlay a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 20px var(--accent);
+    transform: scale(1.05) translateX(-10px);
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px !important;
+    color: var(--accent) !important;
+}
+
+/* --- Logo/Brand --- */
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    position: fixed;
+    top: 35px;
+    left: 40px;
+    z-index: 100;
+    letter-spacing: 3px;
+    color: var(--accent);
+}
+
+/* --- Layouts --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 50%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--accent-secondary);
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d0d0d0;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.subtitle {
+    color: var(--accent);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.cta-link {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+    width: max-content;
+    padding-bottom: 5px;
+    transition: 0.3s;
+    margin-top: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+}
+
+.cta-link:hover {
+    color: var(--accent);
+    border-color: var(--accent-secondary);
+}
+
+/* --- Cards (Glassmorphism) --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 35px;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 51, 102, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Artist Cards --- */
+.artist-card {
+    text-align: center;
+}
+
+.artist-card h2 {
+    margin-top: 20px;
+}
+
+.genre {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- Form --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+
+label {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--font-heading);
+}
+
+input, textarea, select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    padding: 15px;
+    color: white;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(255, 51, 102, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+button.submit-btn {
+    background: linear-gradient(135deg, var(--accent) 0%, #cc0044 100%);
+    border: none;
+    padding: 18px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    letter-spacing: 3px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+button.submit-btn:hover {
+    box-shadow: 0 5px 25px rgba(255, 51, 102, 0.4);
+    transform: translateY(-3px);
+}
+
+/* --- Image Placeholders --- */
+.img-box {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-family: var(--font-heading);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 51, 102, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.card:hover .img-box::before {
+    left: 100%;
+}
+
+/* --- Social Links --- */
+.social-card {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+.social-card h2 {
+    margin-bottom: 10px;
+}
+
+.social-handle {
+    color: var(--accent-glow) !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* --- Event Tags --- */
+.event-tag {
+    display: inline-block;
+    padding: 8px 15px;
+    background: rgba(255, 51, 102, 0.1);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.event-tag.past {
+    background: rgba(153, 153, 153, 0.1);
+    border-color: var(--text-muted);
+    color: var(--text-muted);
+}
+
+/* --- Contact Grid --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.info-card h3:first-child {
+    margin-top: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    .nav-toggle { top: 20px; right: 20px; }
+    .logo { top: 25px; left: 20px; font-size: 1.2rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .menu-overlay a { font-size: 1.5rem; }
+}
