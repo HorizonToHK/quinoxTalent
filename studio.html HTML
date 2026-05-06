@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Studio | Quinox Talent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo">QUINOX</div>
+    
+    <div id="myNav" class="menu-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="artists.html">Our Artists</a>
+        <a href="studio.html">Our Studio</a>
+        <a href="events.html">Events</a>
+        <a href="socials.html">Social Media</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    <button class="nav-toggle" onclick="openNav()">Menu</button>
+
+    <div class="container">
+        <p class="subtitle">Where Magic Happens</p>
+        <h1>OUR STUDIO</h1>
+        <p>State-of-the-art facilities designed for creativity and excellence.</p>
+
+        <div class="grid">
+            <!-- Main Studio -->
+            <div class="card" style="grid-column: span 2;">
+                <div class="img-box" style="height: 400px;">STUDIO MAIN ROOM</div>
+                <h2>STUDIO Q1 — THE FLAGSHIP</h2>
+                <p>
+                    Our flagship recording space features industry-leading equipment including SSL 
+                    9000K console, Genelec monitoring system, and a carefully curated collection of 
+                    vintage and modern microphones. Dolby Atmos certified for immersive audio production.
+                </p>
+                <br>
+                <p style="color: var(--text-muted);">
+                    <strong>Equipment Highlights:</strong> SSL 9000K Console, Neumann U87, AKG C414, 
+                    Universal Audio Interfaces, Genelec 8351B Monitors
+                </p>
+            </div>
+
+            <!-- Vocal Booth -->
+            <div class="card">
+                <div class="img-box">VOCAL BOOTH</div>
+                <h2>VOCAL SUITE</h2>
+                <p>
+                    Acoustically treated isolation booth designed for pristine vocal recording. 
+                    Climate-controlled environment with professional monitoring.
+                </p>
+            </div>
+
+            <!-- Production Room -->
+            <div class="card">
+                <div class="img-box">PRODUCTION STATION</div>
+                <h2>PRODUCTION ROOM</h2>
+                <p>
+                    Dedicated space for beatmaking, sound design, and mixing. Equipped with 
+                    cutting-edge software and hardware synthesizers.
+                </p>
+            </div>
+
+            <!-- Lounge -->
+            <div class="card">
+                <div class="img-box">CREATIVE LOUNGE</div>
+                <h2>CREATIVE LOUNGE</h2>
+                <p>
+                    Comfortable space for brainstorming, writing sessions, and taking breaks. 
+                    Complete with premium coffee bar and inspiring artwork.
+                </p>
+            </div>
+        </div>
+
+        <br><br>
+        <div class="card">
+            <h2>BOOKING INFORMATION</h2>
+            <p>
+                Our studio is available for recording, mixing, mastering, and production sessions. 
+                We offer hourly rates, day rates, and project packages. All sessions include an 
+                experienced engineer.
+            </p>
+            <br>
+            <a href="contact.html" class="cta-link">Book a Session →</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
