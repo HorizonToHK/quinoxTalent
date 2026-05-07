@@ -6,9 +6,9 @@
     --card-bg: rgba(255, 255, 255, 0.03);
     --text-main: #ffffff;
     --text-muted: #999999;
-    --accent: #ff3366; /* Quinox Pink/Red */
-    --accent-secondary: #ffcc00; /* Gold accent */
-    --accent-glow: #00ffff; /* Cyan */
+    --accent: #ff3366; 
+    --accent-secondary: #ffcc00; 
+    --accent-glow: #00ffff; 
     --border: rgba(255, 255, 255, 0.08);
     --font-heading: 'Orbitron', sans-serif;
     --font-body: 'Raleway', sans-serif;
@@ -378,16 +378,7 @@ button.submit-btn:hover {
     margin-top: 0;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-    h1 { font-size: 3rem; }
-    .nav-toggle { top: 20px; right: 20px; }
-    .logo { top: 25px; left: 20px; font-size: 1.2rem; }
-    .contact-grid { grid-template-columns: 1fr; }
-    .menu-overlay a { font-size: 1.5rem; }
-}
-
-/* --- Instagram Preview Card --- */
+/* --- Instagram Preview Card Component --- */
 .ig-preview-card {
     background: #000;
     border: 1px solid #333;
@@ -461,4 +452,13 @@ button.submit-btn:hover {
 }
 .ig-btn:hover {
     background: #333;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    .nav-toggle { top: 20px; right: 20px; }
+    .logo { top: 25px; left: 20px; font-size: 1.2rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .menu-overlay a { font-size: 1.5rem; }
 }
